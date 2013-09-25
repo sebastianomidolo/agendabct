@@ -1,0 +1,13 @@
+
+<% if @filter_msg.blank? %>
+ <h1>Lista eventi</h1>
+<% else %>
+<%= content_tag(:h1, "Lista eventi (#{@filter_msg})") %>
+<% end %>
+
+<%= render :partial=>'searchform' %>
+
+<%= render :partial=>'lista', :locals=>{:singola_sede=>false} %>
+
+<% link_to 'New Event', new_event_path %>
+

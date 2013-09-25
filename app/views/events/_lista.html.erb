@@ -1,0 +1,13 @@
+<table>
+
+<% @events.each do |event| %>
+  <tr>
+<% if singola_sede==false %>
+    <td><%= link_to(event.venue.name, venue_path(event.venue)) %></td>
+<% end %>
+    <td><%= link_to(event.title, event) %></td>
+    <td><%= event.fonte_dati %></td>
+  </tr>
+<% end %>
+</table>
+

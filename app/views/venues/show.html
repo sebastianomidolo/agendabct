@@ -1,0 +1,5 @@
+<%= content_tag(:h1, @venue.name) %>
+
+<%=
+ render :partial=>'events/lista', :locals=>{:singola_sede=>true}
+%>

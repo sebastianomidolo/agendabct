@@ -1,0 +1,11 @@
+
+<%= content_tag(:h1, params[:attribute_label]) %>
+
+<table>
+  <% @event_attributes.each do |ea| %>
+  <tr>
+    <td><%= link_to(ea.content.capitalize, events_path(:event_attribute=>{params[:attribute_label]=>ea.content})) %></td>
+    <td><%= ea[:count] %></td>
+  </tr>
+  <% end %>
+</table>
